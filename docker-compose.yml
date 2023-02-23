@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    volumes:
+      - /srv/jellyfin/config:/config
+      - /srv/jellyfin/cache:/cache
+      - /home/user/Videos:/media 
+    network_mode: 'host'
+    container_name: jellyfin
+    restart: always
+
